@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" font-family="Segoe UI, Microsoft YaHei, Arial, sans-serif">
+  <rect x="0" y="0" width="1280" height="820" fill="#ffffff"/>
+  <text x="640" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#123">CH32L103K8U6 (QFN32) USB->CAN @1Mbps 接线图 —— 驱动 DM-J4310-2EC</text>
+
+  <!-- USB block -->
+  <rect x="30" y="70" width="230" height="330" rx="8" fill="#eaf3ff" stroke="#356" stroke-width="2"/>
+  <text x="145" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="#123">USB 口 (PC 侧)</text>
+  <text x="145" y="118" text-anchor="middle" font-size="12" fill="#345">USB Type-C / Micro-B</text>
+  <line x1="145" y1="130" x2="145" y2="150" stroke="#888"/>
+  <text x="60" y="170" font-size="13" fill="#000">VBUS (5V)</text>
+  <circle cx="230" cy="166" r="4" fill="#f90"/>
+  <text x="60" y="205" font-size="13" fill="#000">D-  (USBDM)</text>
+  <circle cx="230" cy="201" r="4" fill="#28c"/>
+  <text x="60" y="240" font-size="13" fill="#000">D+  (USBDP)</text>
+  <circle cx="230" cy="236" r="4" fill="#28c"/>
+  <text x="60" y="275" font-size="13" fill="#000">GND</text>
+  <circle cx="230" cy="271" r="4" fill="#666"/>
+  <rect x="45" y="300" width="200" height="80" rx="6" fill="#fff7dd" stroke="#a80"/>
+  <text x="145" y="322" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#750">ESD 防护 (选)</text>
+  <text x="145" y="340" text-anchor="middle" font-size="11.5" fill="#653">NUP2105L / ESD5V0 / TPD 系列</text>
+  <text x="145" y="357" text-anchor="middle" font-size="11.5" fill="#653">靠近连接器: D-/D+/VBUS/GND</text>
+  <text x="145" y="374" text-anchor="middle" font-size="11.5" fill="#653">(小功率桌面场景可省)</text>
+
+  <!-- MCU -->
+  <rect x="330" y="55" width="420" height="430" rx="10" fill="#f4f9f0" stroke="#384" stroke-width="2"/>
+  <text x="540" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="#143">CH32L103K8U6  QFN32 4x4mm</text>
+  <text x="540" y="100" text-anchor="middle" font-size="11.5" fill="#465">RISC-V 64KB Flash / 20KB RAM, HSI 96MHz->USB 48MHz(无需晶振)</text>
+
+  <!-- pads listing (文字示意, 非真实封装脚位几何) -->
+  <g font-size="12">
+    <text x="345" y="132" font-weight="bold" fill="#036">焊盘 | 功能</text>
+    <text x="345" y="152">1    VDD 3.3V</text>
+    <text x="345" y="172">0(EP) VSS</text>
+    <text x="345" y="192">21  PA11 = USBDM (D-)</text>
+    <text x="345" y="212">22  PA12 = USBDP (D+)</text>
+    <text x="345" y="232">32  PB8  = CAN1_RX</text>
+    <text x="345" y="252">31  PB9  = CAN1_TX / BOOT0</text>
+    <text x="345" y="272">23  PA13 = SWDIO</text>
+    <text x="345" y="292">24  PA14 = SWCLK</text>
+    <text x="345" y="312">16  PB2  = BOOT1</text>
+    <text x="345" y="332">25  PA15 = 心跳 LED</text>
+    <text x="345" y="352">28  PB5  = 错误 LED(选)</text>
+  </g>
+  <g font-size="10.5" fill="#555">
+    <text x="345" y="375">PC14/PC15、OSC_IN/OUT、PA0~PB7 等未用脚</text>
+    <text x="345" y="390">建议悬空或设为下拉输入/输出低</text>
+    <text x="345" y="410" fill="#a00">注意: K8U6 无 NRST 引脚;</text>
+    <text x="345" y="425" fill="#a00">PB9 与 BOOT0 内部短接 → 外接 4.7k 下拉;</text>
+    <text x="345" y="440" fill="#a00">PB9 不耐 5V → 必须用 3.3V CAN 收发器。</text>
+  </g>
+
+  <!-- CAN transceiver -->
+  <rect x="830" y="70" width="260" height="240" rx="8" fill="#fdf0e7" stroke="#c66" stroke-width="2"/>
+  <text x="960" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="#611">CAN 收发器 3.3V</text>
+  <text x="960" y="114" text-anchor="middle" font-size="11.5" fill="#844">SIT1051T/3 或 TJA1051T/3</text>
+  <text x="960" y="130" text-anchor="middle" font-size="11.5" fill="#844">SN65HVD230 (3.3V)</text>
+  <text x="870" y="195" font-size="13" fill="#000">TXD ← PB9 (CAN1_TX)</text>
+  <circle cx="1065" cy="191" r="4" fill="#c33"/>
+  <text x="870" y="160" font-size="13" fill="#000">RXD → PB8 (CAN1_RX)</text>
+  <circle cx="1065" cy="156" r="4" fill="#c33"/>
+  <text x="870" y="230" font-size="13" fill="#000">VCC = 3.3V (100nF 就近)</text>
+  <text x="870" y="255" font-size="13" fill="#000">STB/S 经 10k 下拉(正常模式)</text>
+  <text x="870" y="280" font-size="13" fill="#000">GND 共地</text>
+
+  <!-- bus side -->
+  <rect x="830" y="340" width="260" height="120" rx="8" fill="#eef6ff" stroke="#468" stroke-width="2"/>
+  <text x="960" y="364" text-anchor="middle" font-size="14" font-weight="bold" fill="#146">CAN 总线侧</text>
+  <text x="850" y="390" font-size="13" fill="#000">CANH</text>
+  <circle cx="1055" cy="386" r="4" fill="#080"/>
+  <text x="850" y="420" font-size="13" fill="#000">CANL</text>
+  <circle cx="1055" cy="416" r="4" fill="#080"/>
+  <text x="850" y="450" font-size="13" fill="#000">120 欧终端电阻 + 跳线 JP1 (选)</text>
+
+  <!-- Motor -->
+  <rect x="1150" y="70" width="110" height="470" rx="8" fill="#f6f2ff" stroke="#647" stroke-width="2"/>
+  <text x="1205" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#414">DM-J4310</text>
+  <text x="1205" y="113" text-anchor="middle" font-size="14" font-weight="bold" fill="#414">-2EC</text>
+  <text x="1205" y="140" text-anchor="middle" font-size="10.5" fill="#535">XT30(2+2)-M x2</text>
+  <text x="1205" y="175" text-anchor="middle" font-size="11" fill="#080">CANH (小针)</text>
+  <text x="1205" y="215" text-anchor="middle" font-size="11" fill="#080">CANL (小针)</text>
+  <text x="1205" y="255" text-anchor="middle" font-size="11" fill="#000">24V+ (大针)</text>
+  <text x="1205" y="295" text-anchor="middle" font-size="11" fill="#000">GND (大针)</text>
+  <text x="1205" y="335" text-anchor="middle" font-size="10" fill="#a44">两 XT30 内部并联;</text>
+  <text x="1205" y="350" text-anchor="middle" font-size="10" fill="#a44">线序以原厂线缆/表测为准</text>
+  <rect x="1160" y="365" width="90" height="70" rx="5" fill="#fff" stroke="#a88"/>
+  <text x="1205" y="386" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#000">24V 电源</text>
+  <text x="1205" y="402" text-anchor="middle" font-size="10" fill="#000">(与 USB 5V 分开)</text>
+  <text x="1205" y="420" text-anchor="middle" font-size="10" fill="#000">额定 24V 电源</text>
+
+  <!-- power -->
+  <rect x="330" y="505" width="420" height="130" rx="8" fill="#fbf2e4" stroke="#a80" stroke-width="2"/>
+  <text x="540" y="528" text-anchor="middle" font-size="14" font-weight="bold" fill="#750">3.3V 电源(板上)</text>
+  <text x="350" y="552" font-size="12.5">USB VBUS 5V ---- LDO 3.3V (ME6211C33 / HT7333 / AMS1117-3.3)</text>
+  <text x="350" y="574" font-size="12.5">LDO 出 3.3V ---- MCU pad1 VDD; 10uF + 100nF 去耦</text>
+  <text x="350" y="596" font-size="12.5">GND ---- MCU pad0(EP,VSS) + 收发器 GND + USB GND</text>
+  <text x="350" y="618" font-size="12.5" fill="#a00">电机 24V 不进入本板 (只共用 GND / CAN 差分)</text>
+
+  <!-- wires: 实线=信号; 虚线=电源/地; 正交交叉无圆点=不相连 -->
+  <g stroke="#28c" stroke-width="2.2" fill="none">
+    <path d="M260 201 L295 201 L295 192 L330 192"/>  <!-- D- → PA11 USBDM -->
+    <path d="M260 236 L295 236 L295 212 L330 212"/>  <!-- D+ → PA12 USBDP -->
+  </g>
+  <g stroke="#f90" stroke-width="1.8" fill="none" stroke-dasharray="6 4">
+    <path d="M260 166 L278 166 L278 540 L330 540"/>  <!-- VBUS 5V → LDO (电源块) -->
+  </g>
+  <g stroke="#666" stroke-width="1.8" fill="none" stroke-dasharray="6 4">
+    <path d="M260 271 L305 271 L305 596 L330 596"/>  <!-- USB GND → 共地 -->
+  </g>
+  <text x="268" y="193" font-size="10.5" fill="#28c">D-</text>
+  <text x="268" y="230" font-size="10.5" fill="#28c">D+</text>
+  <text x="260" y="150" font-size="10.5" fill="#f90">VBUS 5V</text>
+  <text x="268" y="264" font-size="10.5" fill="#666">GND</text>
+  <text x="272" y="590" font-size="10.5" fill="#f90">5V</text>
+  <text x="300" y="640" font-size="10.5" fill="#666">GND</text>
+
+  <g stroke="#c33" stroke-width="2.4" fill="none">
+    d="M750 232 L830 160"/>  <!-- PB8 CAN1_RX ← RXD -->
+    d="M750 252 L830 195"/>  <!-- PB9 CAN1_TX → TXD -->
+  </g>
+  <text x="825" y="190" text-anchor="end" font-size="10.5" fill="#c33">PB8 CAN_RX</text>
+  <text x="825" y="258" text-anchor="end" font-size="10.5" fill="#c33">PB9 CAN_TX</text>
+
+  <g stroke="#080" stroke-width="2.4" fill="none">
+    <path d="M1055 386 L1150 175"/>  <!-- CANH → 电机 -->
+    <path d="M1055 416 L1150 215"/>  <!-- CANL → 电机 -->
+  </g>
+  <text x="800" y="470" font-size="11" fill="#666">CANH/CANL 用双绞差分线, 近电机端加 TVS;</text>
+  <text x="800" y="486" font-size="11" fill="#666">收发器到总线可加 22~33 欧串阻; 总线较长时通过 JP1 接 120 欧终端;</text>
+  <text x="800" y="502" font-size="11" fill="#666">电机 24V 地仅在电源端与 USB 侧单点共地, 电机电源不进入本板;</text>
+  <text x="800" y="518" font-size="11" fill="#666">先核对 DM-J4310-2EC 的 XT30 线序(小针 CANH/CANL, 大针 24V/GND)。</text>
+
+  <!-- legend -->
+  <text x="30" y="700" font-size="12" fill="#333">图例: 实线=信号连接; 虚线=电源/地连接; 交叉处无圆点 = 不相连(标准原理图画法)。</text>
+  <text x="30" y="720" font-size="12" fill="#333">本图为连接示意, 不表示 QFN 真实封装脚位几何; 具体焊盘编号以 CH32L103 DS/EVT 原理图符号为准。</text>
+</svg>

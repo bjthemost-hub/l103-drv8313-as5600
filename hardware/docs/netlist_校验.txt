@@ -1,0 +1,53 @@
++3V3           C1.1; C2.1; C3.1; J2.1; J3.1; J4.1; J7.1; R3.1; R4.1; R5.1; R6.1; R7.1; U1.1; U3.2; U4.3; VR1.3; VR2.3; VR3.3
++5V            J1.1; U3.1
+/ADC0          U1.6; VR1.2
+/ADC1          U1.7; VR2.2
+/ADC4          U1.10; VR3.2
+/BOOT1         J7.5; R2.1; U1.16
+/CAN1_RX       U1.32; U4.4
+/CAN1_TX       R1.1; U1.31; U4.1
+/CANH          J10.1; R12.1; U4.7
+/CANL          J10.2; R12.2; U4.6
+/DRV_CP1       C5.1; U2.1
+/DRV_CP2       C5.2; U2.2
+/DRV_RESET     R6.2; U2.16
+/DRV_SLEEP     R7.2; U2.17
+/DRV_V33OUT    C7.1; U2.15
+/DRV_VCP       C6.1; U2.3
+/EN_A          U1.26; U2.26
+/EN_B          U1.27; U2.24
+/EN_C          U1.28; U2.22
+/I2C1_SCL      R3.2; U1.29; U3.7
+/I2C1_SDA      R4.2; U1.30; U3.6
+/LED_ERR       R9.1; U1.3
+/LED_ERR_A     D2.2; R9.2
+/LED_OK        R8.1; U1.25
+/LED_OK_A      D1.2; R8.2
+/MOT_U         J9.1; U2.5
+/MOT_V         J9.2; U2.8
+/MOT_W         J9.3; U2.9
+/OUT0          J7.3; U1.4
+/OUT1          J7.4; U1.5
+/PGND          C4.2; U2.10; U2.29; U2.6; U2.7
+/PWM_A         U1.12; U2.27
+/PWM_B         U1.13; U2.25
+/PWM_C         U1.14; U2.23
+/PWM_EXT       J7.2; U1.15
+/SERVO_VCC     C9.1; J5.1; J6.1
+/SV1           J5.3; U1.18
+/SV2           J6.3; U1.17
+/SWCLK         J2.3; U1.24
+/SWDIO         J2.2; U1.23
+/U1_RX         J3.3; U1.20
+/U1_TX         J3.2; U1.19
+/U2_RX         J4.3; U1.9
+/U2_TX         J4.2; U1.8
+/USB_DM        R10.2; U1.21
+/USB_DM_J      J1.2; R10.1
+/USB_DP        R11.2; U1.22
+/USB_DP_J      J1.3; R11.1
+/VBAT          J8.1; R13.1
+/VBAT_SENSE    C8.1; R13.2; R14.1; U1.11
+/VM            C4.1; C6.2; U2.11; U2.4
+/nFAULT        R5.2; U1.2; U2.18
+GND            C1.2; C2.2; C3.2; C7.2; C8.2; C9.2; D1.1; D2.1; J1.5; J1.SH; J10.3; J2.4; J3.4; J4.4; J5.2; J6.2; J7.6; J8.2; R1.2; R14.2; R2.2; U1.0; U2.14; U2.20; U2.28; U3.4; U3.8; U4.2; U4.8; VR1.1; VR2.1; VR3.1

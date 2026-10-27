@@ -1,0 +1,106 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "3a341a73-25de-4375-8c7d-1386ef490be1")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 186.69 50.8)
+		(size 40.894 26.67)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "16f44c1d-6d13-4cbd-89fc-06c7d36ef834")
+		(property "Sheetname" "DRV8313"
+			(at 186.69 50.317 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8128 0.8128)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DRV8313.kicad_sch"
+			(at 186.69 77.8717 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8128 0.8128)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "L103_CANUSB_DRV8313"
+				(path "/3a341a73-25de-4375-8c7d-1386ef490be1"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 126.492 49.53)
+		(size 40.64 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 35 223 255 1)
+		)
+		(uuid "63ce2ea0-7a03-40cb-b173-dd729ae45c60")
+		(property "Sheetname" "CH32L103"
+			(at 126.492 48.8184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8128 0.8128)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "CH32L103.kicad_sch"
+			(at 126.492 78.0546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.8128 0.8128)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "L103_CANUSB_DRV8313"
+				(path "/3a341a73-25de-4375-8c7d-1386ef490be1"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

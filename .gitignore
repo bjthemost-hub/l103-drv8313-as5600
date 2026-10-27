@@ -1,0 +1,30 @@
+# 编译产物
+build/
+obj/
+*.o
+*.d
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+
+# Qt / IDE
+*.pro.user
+*.autosave
+.qtc_clangd/
+CMakeLists.txt.user*
+
+# KiCad 自动备份
+*.kicad_prl
+*-backups/
+_autosave-*
+*.bak
+*.bak_*
+
+# 其它
+work/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
